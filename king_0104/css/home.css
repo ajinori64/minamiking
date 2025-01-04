@@ -1,0 +1,375 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+h1 {
+    position: absolute;
+    left: 55%; /* 画面中央から開始 */
+    transform: translateX(-50%); /* 中央揃え */
+    color: white;
+    font-size: 2.4vw;
+    z-index: 10; /* 背景より前面に表示 */
+    }
+
+h2 {
+    position: absolute;
+    font-size: 1.5vw;
+    font-family: "Hannari";
+    cursor: pointer;
+    color: white;
+    left: 1%;
+}
+
+.logoutlink {
+    color: white;
+}
+
+#help-button {
+    bottom: 0.2%; /* 左下に配置 */
+}
+
+#home-button {
+    top: 20%; /* 右下に配置 */
+}
+
+#aaa-button{
+    top: 50%;
+}
+
+#logout {
+    top: 80%;
+}
+
+.vertical-line {
+    height: 100%; /* 画面の高さの80% */
+    border-left: 7px solid rgba(0, 0, 0, 0.417);
+    position: absolute;
+    left: 10%;
+    top: 0%;
+    z-index: 11;
+}
+
+.vertical-lineyoko {
+    width: 100%; /* 画面幅の80% */
+    border-top: 7px solid rgba(0, 0, 0, 0.417);
+    position: absolute;
+    top: 18.2%;
+    left: 10.35%;
+    z-index: 10;
+}
+
+.kuziri, .kuziri2, .kuziri3 {
+    border-top: 3px solid rgba(0, 0, 0, 0.417);
+    position: absolute;
+}
+
+.kuziri {
+    width: 10%;
+    top: 18.2%;
+}
+
+.kuziri2 {
+    width: 10%;
+    top: 30%;
+}
+
+.kuziri3 {
+    width: 10%;
+    top: 90%;
+}
+        
+.backcolor {
+    position: absolute;
+    left: 10.35%;
+    width: 100%;
+    height: 18.2%;
+    background-image: url('istockphoto.jpg'); /* 背景画像を挿入 */
+    background-size: cover; /* 画像をコンテナに合わせる */
+    background-position: center; /* 画像を中央に配置 */
+}
+
+.backcolor2 {
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    background-color: rgb(84, 81, 82);
+    z-index: -10;
+    top: 0%;
+}
+
+.backcolor3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(171, 166, 168);
+    z-index: -10;
+    left: 10%;
+    top: 18.5%;
+    right: 15%;
+}
+        
+.backimage {
+    position: absolute;
+    width: 100%;
+    left: 10%;
+    height: 18.5%;
+    top: 0%;
+    z-index: -12;
+    object-fit: fill;
+}
+
+        
+#help {
+    position: absolute;
+    top: 400px;
+    left: 30%;
+    font-size: 80px;
+    color: black;
+    display: none;
+    padding: 10px;
+    /*border: 1px solid black;*/
+    z-index: 10;
+    background-color: white;
+}
+
+        
+#search-bar {
+    position: absolute;
+    top: 12%;
+    left: 48%;
+    display: flex;
+    gap: 10px;
+}
+
+        
+#search-input {
+    padding: 5px;
+    font-size: 16px;
+    width: 200px;
+}
+
+
+#search-button {
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+#scrollable-area {
+    position: absolute;
+    left: 8%; /* 必要に応じて調整 */
+    top: 18.5%; /* 必要に応じて調整 */
+    width: 74%;
+    height: 81.5%; /* 明確にスクロール可能な高さを設定 */
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#content {
+    position: relative; /* 相対配置で位置調整 */
+    top: 1%;
+    left: 20%; /* 横方向に少し右へずらす */
+    padding: 20%;
+    font-size: 0.9vw;
+    line-height: 1.5;
+}
+
+.circle{
+    position: absolute;
+    top:1vw;
+    left:1.3vw;    
+    display: inline-block;
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    /*background: skyblue;*/
+    text-align:center;
+    line-height: 7vw;
+    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBGiqUDgEkMS50WByY1CJEcigkwso5n7hBvg&s);
+    z-index: 1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.wrapper {
+    margin: 15px auto;
+    max-width: 700px;
+    z-index: 20;
+}
+
+.container-calendar {
+    background: #ffffff;
+    padding: 15px;
+    width: 15.1%;
+    margin: 0 auto;
+    overflow: auto;
+    z-index: 20;
+    position:absolute;
+    top:20%;
+    right:1%;
+}
+.button-container-calendar button {
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;
+    background: #00a2b7;
+    color: #fff;
+    border: 1px solid #0aa2b5;
+    border-radius: 4px;
+    padding: 5px 10px;
+    z-index: 20;
+}
+.table-calendar {
+    border-collapse: collapse;
+    width: 100%;
+    z-index: 20;
+}
+.table-calendar th,
+.table-calendar td{
+    padding: 10px;
+    border: 1px solid #e2e2e2;
+    text-align: center;
+    vertical-align: top;
+    z-index: 20;
+}
+.date-picker.selected {
+    font-weight: bold;
+    color: #fff;
+    background: gold;
+}
+.date-picker.selected span {
+    border-bottom: 2px solid currentColor;
+}
+
+/* 日曜 */
+.date-picker:nth-child(1) {
+  color: red;
+}
+/* 土曜 */
+.date-picker:nth-child(7) {
+  color: blue;
+}
+#monthAndYear {
+    text-align: center;
+    margin-top: 0;
+}
+.button-container-calendar {
+    position: relative;
+    margin-bottom: 1em;
+    overflow: hidden;
+    clear: both;
+    z-index: 20;
+}
+#previous {
+    float: left;
+}
+#next {
+    float: right;
+}
+.footer-container-calendar {
+    margin-top: 1em;
+    border-top: 1px solid #dadada;
+    padding: 10px 0;
+    z-index: 20;
+}
+.footer-container-calendar select {
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;
+    background: #ffffff;
+    color: #454545;
+    border: 1px solid #bfc5c5;
+    border-radius: 3px;
+    padding: 5px 1em;
+    z-index: 20;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.pagetop {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 0%;
+    background: #fff;
+    border: solid 2px #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    
+}
+.pagetop__arrow {
+    height: 10px;
+    width: 10px;
+    border-top: 3px solid #000;
+    border-right: 3px solid #000;
+    transform: translateY(20%) rotate(-45deg);
+    z-index: 10;
+}
+/* ホームボタン全体のスタイル */
+.home-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    border: 2px solid #000;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    left: 5%;
+    top: 20%;
+    position: absolute;
+}
+/* ホームボタンのホバー時のスタイル */
+.home-button:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+/* ホームアイコンのスタイル */
+.home-icon {
+    position: relative;
+    width: 30px;
+    height: 24px;
+    background-color: #000; /* 家の四角部分 */
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+/* 家の屋根（三角形） */
+.home-icon::before {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 14px solid #000; /* 屋根の色 */
+}
+/* 家の扉 */
+.home-icon::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 10px;
+    background-color: #fff; /* 扉の色 */
+    border-radius: 1px;
+}
